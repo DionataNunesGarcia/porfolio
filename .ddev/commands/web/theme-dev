@@ -1,0 +1,3 @@
+#!/bin/bash
+cd web/themes/custom/front_theme
+npm run dev

@@ -1,0 +1,50 @@
+#!/bin/bash
+set -e
+
+# Colors
+CYAN="\e[36m"
+YELLOW="\e[33m"
+GREEN="\e[32m"
+RED="\e[31m"
+RESET="\e[0m"
+
+function log() { echo -e "${CYAN}➤${RESET} $1"; }
+function warn() { echo -e "${YELLOW}⚠${RESET} $1"; }
+function ok() { echo -e "${GREEN}✔${RESET} $1"; }
+function fail() { echo -e "${RED}✘${RESET} $1"; }
+
+log "Checking composer.lock changes"
+
+if ! git diff --quiet composer.lock; then
+  warn "composer.lock has local changes"
+fi
+
+log "Installing composer dependencies"
+composer install
+
+log "Running database updates"
+drush updb -y
+
+log "Importing configuration"
+drush cim -y
+
+log "Building frontend"
+if command -v ddev >/dev/null && ddev describe >/dev/null 2>&1; then
+  ddev theme-build || warn "Frontend build skipped"
+else
+  warn "Frontend build skipped"
+fi
+
+log "Rebuilding Drupal cache"
+drush cr
+
+log "Importing configuration to confirmation"
+drush cim -y
+
+log "Rebuilding Drupal cache"
+drush cr
+
+log "Create login link for confirmation"
+drush uli
+
+ok "Local update completed successfully!"

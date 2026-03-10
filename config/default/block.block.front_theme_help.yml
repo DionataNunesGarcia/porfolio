@@ -1,0 +1,22 @@
+uuid: 0472c80c-0ce5-4535-8d94-a2cd8dae387b
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - front_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: front_theme_help
+theme: front_theme
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
