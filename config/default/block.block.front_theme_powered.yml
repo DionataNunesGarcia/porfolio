@@ -1,0 +1,22 @@
+uuid: 742b46fa-2b5e-4e41-8a82-d9f62c0e91f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - front_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: front_theme_powered
+theme: front_theme
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
