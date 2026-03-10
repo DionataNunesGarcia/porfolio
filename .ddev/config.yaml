@@ -7,8 +7,8 @@ xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
 database:
-    type: mariadb
-    version: "10.11"
+  type: mariadb
+  version: "10.11"
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
@@ -295,3 +295,6 @@ corepack_enable: true
 #   - exec: drush sql:sanitize
 #   - exec: drush updatedb
 #   - exec: drush cache:rebuild
+hooks:
+  post-start:
+    - exec: chmod +x .ddev/commands/web/*
