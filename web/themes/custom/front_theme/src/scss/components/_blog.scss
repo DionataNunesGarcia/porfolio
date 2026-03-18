@@ -1,0 +1,57 @@
+.blog {
+  @apply py-24 px-6;
+  background-color: #101010;
+
+  &__inner {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  &__header {
+    @apply flex items-end justify-between mb-16;
+  }
+
+  &__title {
+    @apply text-3xl md:text-5xl font-bold text-[#EAEAEA];
+    font-family: "Syne", sans-serif;
+  }
+
+  &__grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+  }
+
+  &__card {
+    @apply group cursor-pointer;
+  }
+
+  &__card-image-wrapper {
+    @apply aspect-[16/10] overflow-hidden rounded-lg mb-4;
+  }
+
+  &__card-image {
+    @apply w-full h-full object-cover;
+    @apply transition-transform duration-500;
+
+    .blog__card:hover & {
+      @apply scale-105;
+    }
+  }
+
+  &__card-category {
+    @apply text-xs uppercase tracking-wider text-[#888888] mb-2;
+    font-family: "Inter", sans-serif;
+  }
+
+  &__card-title {
+    @apply text-lg font-bold text-[#EAEAEA];
+    @apply transition-colors duration-300;
+    font-family: "Syne", sans-serif;
+
+    .blog__card:hover & {
+      @apply text-[#F2FF49];
+    }
+  }
+
+  &__card-date {
+    @apply text-sm text-[#888888] mt-2;
+  }
+}

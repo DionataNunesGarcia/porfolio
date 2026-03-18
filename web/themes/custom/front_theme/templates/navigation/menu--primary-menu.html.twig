@@ -1,0 +1,12 @@
+<ul class="flex justify-center gap-8 items-center">
+
+  {% for item in items %}
+    <li>
+      <a href="{{ item.url }}"
+         class="text-gray-300 hover:text-white transition">
+        {{ item.title }}
+      </a>
+    </li>
+  {% endfor %}
+
+</ul>

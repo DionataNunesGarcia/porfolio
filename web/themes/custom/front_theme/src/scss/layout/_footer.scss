@@ -1,0 +1,73 @@
+.footer {
+  @apply py-16 px-6;
+  @apply border-t border-[#2A2A2A];
+  background-color: #101010;
+
+  &__inner {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  &__top {
+    @apply grid grid-cols-1 md:grid-cols-4 gap-12 mb-16;
+  }
+
+  &__brand {
+    @apply md:col-span-1;
+  }
+
+  &__logo {
+    @apply text-xl font-bold text-[#EAEAEA] mb-4;
+    font-family: "Syne", sans-serif;
+  }
+
+  &__brand-description {
+    @apply text-sm text-[#888888] leading-relaxed;
+    font-family: "Inter", sans-serif;
+  }
+
+  &__nav-group {
+    @apply flex flex-col gap-4;
+  }
+
+  &__nav-title {
+    @apply text-sm uppercase tracking-widest text-[#EAEAEA] mb-2;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+  }
+
+  &__nav-link {
+    @apply text-sm text-[#888888];
+    @apply transition-colors duration-300;
+    font-family: "Inter", sans-serif;
+
+    &:hover {
+      @apply text-[#F2FF49];
+    }
+  }
+
+  &__bottom {
+    @apply flex flex-col md:flex-row items-center justify-between;
+    @apply pt-8 border-t border-[#2A2A2A];
+  }
+
+  &__copyright {
+    @apply text-sm text-[#888888];
+    font-family: "Inter", sans-serif;
+  }
+
+  &__social {
+    @apply flex items-center gap-6 mt-4 md:mt-0;
+  }
+
+  &__social-link {
+    @apply text-[#888888] transition-colors duration-300;
+
+    &:hover {
+      @apply text-[#F2FF49];
+    }
+
+    svg {
+      @apply w-5 h-5;
+    }
+  }
+}

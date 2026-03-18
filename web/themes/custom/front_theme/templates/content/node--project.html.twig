@@ -1,0 +1,17 @@
+<article class="portfolio-project">
+
+  <h1 class="text-3xl font-bold mb-6">
+    {{ label }}
+  </h1>
+
+  {% if content.field_image %}
+    <div class="mb-8">
+      {{ content.field_image }}
+    </div>
+  {% endif %}
+
+  <div class="prose">
+    {{ content.body }}
+  </div>
+
+</article>

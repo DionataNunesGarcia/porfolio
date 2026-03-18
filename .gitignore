@@ -18,6 +18,7 @@
 .yarn/install-state.gz
 
 docroot/themes/custom/*/public/**
+docroot/themes/custom/*/.tmp
 # we're not using recipes in this project.
 ./recipes/
 

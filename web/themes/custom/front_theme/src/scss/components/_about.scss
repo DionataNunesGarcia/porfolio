@@ -1,0 +1,50 @@
+.about {
+  @apply py-24 px-6;
+  background-color: #101010;
+
+  &__inner {
+    @apply max-w-[1200px] mx-auto;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-16 items-center;
+  }
+
+  &__image-wrapper {
+    @apply relative aspect-[3/4] overflow-hidden rounded-lg;
+  }
+
+  &__image {
+    @apply w-full h-full object-cover;
+  }
+
+  &__content {
+    @apply flex flex-col gap-6;
+  }
+
+  &__label {
+    @apply text-sm uppercase tracking-widest text-[#888888];
+    font-family: "Inter", sans-serif;
+  }
+
+  &__title {
+    @apply text-3xl md:text-4xl font-bold text-[#EAEAEA];
+    font-family: "Syne", sans-serif;
+  }
+
+  &__description {
+    @apply text-[#888888] leading-relaxed text-lg;
+    font-family: "Inter", sans-serif;
+  }
+
+  &__stats {
+    @apply grid grid-cols-3 gap-8 mt-8;
+  }
+
+  &__stat-number {
+    @apply text-3xl md:text-4xl font-bold text-[#EAEAEA];
+    font-family: "Syne", sans-serif;
+  }
+
+  &__stat-label {
+    @apply text-sm text-[#888888] mt-1;
+    font-family: "Inter", sans-serif;
+  }
+}

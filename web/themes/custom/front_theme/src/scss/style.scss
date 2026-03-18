@@ -2,5 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "components/*";
-@import "pages/*";
+/* Layout */
+@import "layout/header";
+@import "layout/main-menu";
+@import "layout/layout";
+@import "layout/footer";
+
+/* Components */
+// @import "components/about";
+// @import "components/blog";
+// @import "components/cta-section";
+// @import "components/hero";
+// @import "components/projects";
+// @import "components/services";
+// @import "components/testimonials";
+
+/* Pages */
+@import "pages/home";

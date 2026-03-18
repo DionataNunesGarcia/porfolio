@@ -1,0 +1,84 @@
+.projects {
+  @apply py-24 px-6;
+  background-color: #101010;
+
+  &__inner {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  &__header {
+    @apply flex items-end justify-between mb-16;
+  }
+
+  &__title {
+    @apply text-3xl md:text-5xl font-bold text-[#EAEAEA];
+    font-family: "Syne", sans-serif;
+  }
+
+  &__view-all {
+    @apply text-sm uppercase tracking-wider text-[#888888];
+    @apply underline underline-offset-4;
+    @apply transition-colors duration-300;
+
+    &:hover {
+      @apply text-[#F2FF49];
+    }
+  }
+
+  &__grid {
+    @apply grid grid-cols-1 md:grid-cols-12 gap-6;
+  }
+
+  &__item {
+    @apply relative overflow-hidden rounded-lg cursor-pointer;
+    @apply group;
+
+    &--large {
+      @apply md:col-span-7 aspect-[4/3];
+    }
+
+    &--small {
+      @apply md:col-span-5 aspect-[4/3];
+    }
+  }
+
+  &__item-image {
+    @apply w-full h-full object-cover;
+    @apply transition-transform duration-500;
+
+    .projects__item:hover & {
+      @apply scale-105;
+    }
+  }
+
+  &__item-overlay {
+    @apply absolute inset-0;
+    @apply bg-[#101010]/0 transition-all duration-500;
+    @apply flex items-end p-8;
+
+    .projects__item:hover & {
+      @apply bg-[#101010]/70;
+    }
+  }
+
+  &__item-title {
+    @apply text-xl font-bold text-[#EAEAEA];
+    @apply translate-y-4 opacity-0;
+    @apply transition-all duration-500;
+    font-family: "Syne", sans-serif;
+
+    .projects__item:hover & {
+      @apply translate-y-0 opacity-100;
+    }
+  }
+
+  &__item-category {
+    @apply text-sm text-[#888888] mt-1;
+    @apply translate-y-4 opacity-0;
+    @apply transition-all duration-500 delay-75;
+
+    .projects__item:hover & {
+      @apply translate-y-0 opacity-100;
+    }
+  }
+}

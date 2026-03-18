@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Layout */
+.header-main nav {
+  border: #dac5a7 1px solid;
+  min-width: 594.17px;
+}
+.header-main nav .primary-nav__menu-link {
+  color: #dac5a7 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  @apply bg-black text-[#dac5a7];
+}
+
+.container {
+  @apply mx-auto px-6;
+}
+
+.footer {
+  @apply py-16 px-6;
+  @apply border-t border-[#2A2A2A];
+  background-color: #101010;
+}
+.footer__inner {
+  @apply max-w-[1200px] mx-auto;
+}
+.footer__top {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-12 mb-16;
+}
+.footer__brand {
+  @apply md:col-span-1;
+}
+.footer__logo {
+  @apply text-xl font-bold text-[#EAEAEA] mb-4;
+  font-family: "Syne", sans-serif;
+}
+.footer__brand-description {
+  @apply text-sm text-[#888888] leading-relaxed;
+  font-family: "Inter", sans-serif;
+}
+.footer__nav-group {
+  @apply flex flex-col gap-4;
+}
+.footer__nav-title {
+  @apply text-sm uppercase tracking-widest text-[#EAEAEA] mb-2;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+.footer__nav-link {
+  @apply text-sm text-[#888888];
+  @apply transition-colors duration-300;
+  font-family: "Inter", sans-serif;
+}
+.footer__nav-link:hover {
+  @apply text-[#F2FF49];
+}
+.footer__bottom {
+  @apply flex flex-col md:flex-row items-center justify-between;
+  @apply pt-8 border-t border-[#2A2A2A];
+}
+.footer__copyright {
+  @apply text-sm text-[#888888];
+  font-family: "Inter", sans-serif;
+}
+.footer__social {
+  @apply flex items-center gap-6 mt-4 md:mt-0;
+}
+.footer__social-link {
+  @apply text-[#888888] transition-colors duration-300;
+}
+.footer__social-link:hover {
+  @apply text-[#F2FF49];
+}
+.footer__social-link svg {
+  @apply w-5 h-5;
+}
+
+/* Components */
+/* Pages */
+.primary-nav__menu-link {
+  color: #dac5a7 !important;
+}
+
+/*# sourceMappingURL=style.css.map */

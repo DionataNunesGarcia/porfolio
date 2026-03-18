@@ -1,0 +1,53 @@
+.services {
+  @apply py-24 px-6;
+  background-color: #101010;
+
+  &__inner {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  &__header {
+    @apply mb-16;
+  }
+
+  &__label {
+    @apply text-sm uppercase tracking-widest text-[#888888];
+    @apply mb-4;
+    font-family: "Inter", sans-serif;
+  }
+
+  &__title {
+    @apply text-3xl md:text-5xl font-bold text-[#EAEAEA];
+    font-family: "Syne", sans-serif;
+  }
+
+  &__grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-px;
+    @apply border border-[#2A2A2A];
+  }
+
+  &__item {
+    @apply p-8 md:p-12;
+    @apply border border-[#2A2A2A];
+    @apply transition-colors duration-300;
+
+    &:hover {
+      background-color: #1a1a1a;
+    }
+  }
+
+  &__item-number {
+    @apply text-sm text-[#888888] mb-6;
+    font-family: "Inter", sans-serif;
+  }
+
+  &__item-title {
+    @apply text-xl md:text-2xl font-bold text-[#EAEAEA] mb-4;
+    font-family: "Syne", sans-serif;
+  }
+
+  &__item-description {
+    @apply text-[#888888] leading-relaxed;
+    font-family: "Inter", sans-serif;
+  }
+}

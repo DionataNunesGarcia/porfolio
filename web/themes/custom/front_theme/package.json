@@ -4,10 +4,9 @@
   "description": "",
   "main": "postcss.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tailwindcss -i ./src/scss/style.scss -o ./dist/css/style.css && esbuild src/js/main.js --bundle --outfile=dist/js/main.js",
-    "watch": "tailwindcss -i ./src/scss/style.scss -o ./dist/css/style.css --watch",
-    "build": "tailwindcss -i ./src/scss/style.scss -o ./dist/css/style.css --minify && esbuild src/js/main.js --bundle --minify --outfile=dist/js/main.js"
+    "dev": "sass src/scss/style.scss .tmp/style.css && tailwindcss -i .tmp/style.css -o dist/css/style.css",
+    "watch": "sass --watch src/scss/style.scss:.tmp/style.css & tailwindcss -i .tmp/style.css -o dist/css/style.css --watch",
+    "build": "sass src/scss/style.scss .tmp/style.css && tailwindcss -i .tmp/style.css -o dist/css/style.css --minify"
   },
   "keywords": [],
   "author": "",

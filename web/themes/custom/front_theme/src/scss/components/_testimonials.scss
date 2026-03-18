@@ -1,0 +1,57 @@
+.testimonials {
+  @apply py-24 px-6;
+  @apply border-t border-[#2A2A2A];
+  background-color: #101010;
+
+  &__inner {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  &__header {
+    @apply mb-16;
+  }
+
+  &__title {
+    @apply text-3xl md:text-5xl font-bold text-[#EAEAEA];
+    font-family: "Syne", sans-serif;
+  }
+
+  &__slider {
+    @apply flex gap-8 overflow-x-auto;
+    @apply snap-x snap-mandatory;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    @apply flex-shrink-0 w-full md:w-[calc(50%-1rem)];
+    @apply snap-start;
+    @apply p-8 md:p-12;
+    @apply border border-[#2A2A2A] rounded-lg;
+  }
+
+  &__quote {
+    @apply text-lg text-[#EAEAEA] leading-relaxed mb-8;
+    font-family: "Inter", sans-serif;
+  }
+
+  &__author {
+    @apply flex items-center gap-4;
+  }
+
+  &__author-avatar {
+    @apply w-12 h-12 rounded-full object-cover;
+  }
+
+  &__author-name {
+    @apply text-sm font-semibold text-[#EAEAEA];
+    font-family: "Inter", sans-serif;
+  }
+
+  &__author-role {
+    @apply text-sm text-[#888888];
+  }
+}

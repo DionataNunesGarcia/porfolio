@@ -1,0 +1,32 @@
+.cta-section {
+  @apply py-32 px-6 text-center;
+  @apply border-t border-[#2A2A2A];
+  background-color: #101010;
+
+  &__inner {
+    @apply max-w-[700px] mx-auto;
+  }
+
+  &__title {
+    @apply text-4xl md:text-6xl font-bold text-[#EAEAEA] mb-6;
+    font-family: "Syne", sans-serif;
+  }
+
+  &__description {
+    @apply text-lg text-[#888888] mb-10;
+    font-family: "Inter", sans-serif;
+  }
+
+  &__button {
+    @apply inline-flex items-center gap-2;
+    @apply px-10 py-4 rounded-full;
+    @apply bg-[#C4A962] text-[#101010];
+    @apply text-sm uppercase tracking-wider font-semibold;
+    @apply transition-opacity duration-300;
+    font-family: "Inter", sans-serif;
+
+    &:hover {
+      @apply opacity-80;
+    }
+  }
+}

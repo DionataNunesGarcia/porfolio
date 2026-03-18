@@ -1,0 +1,47 @@
+.hero {
+  @apply relative w-full min-h-screen overflow-hidden;
+  @apply flex flex-col items-center justify-end;
+  @apply pb-16 pt-32;
+  background-color: #101010;
+
+  &__image {
+    @apply absolute inset-0 w-full h-full;
+    @apply object-cover object-top;
+    @apply opacity-60;
+  }
+
+  &__content {
+    @apply relative z-10 text-center;
+    @apply px-6 max-w-[900px] mx-auto;
+  }
+
+  &__title {
+    @apply text-5xl md:text-7xl lg:text-8xl font-bold;
+    @apply text-[#EAEAEA] leading-[1.05];
+    font-family: "Syne", sans-serif;
+  }
+
+  &__subtitle {
+    @apply mt-6 text-lg md:text-xl;
+    @apply text-[#888888] max-w-[600px] mx-auto;
+    font-family: "Inter", sans-serif;
+  }
+
+  &__cta {
+    @apply mt-8 inline-flex items-center gap-2;
+    @apply px-8 py-4 rounded-full;
+    @apply bg-[#C4A962] text-[#101010];
+    @apply text-sm uppercase tracking-wider font-semibold;
+    font-family: "Inter", sans-serif;
+
+    &:hover {
+      @apply opacity-80;
+    }
+  }
+
+  &__scroll-indicator {
+    @apply absolute bottom-8 left-1/2 -translate-x-1/2;
+    @apply text-[#888888] text-sm;
+    @apply flex flex-col items-center gap-2;
+  }
+}
